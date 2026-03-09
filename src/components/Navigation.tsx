@@ -69,7 +69,7 @@ export default function Navigation() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navItems.map(item => (
               <button
                 key={item.id}
@@ -85,28 +85,30 @@ export default function Navigation() {
                 {item.label}
               </button>
             ))}
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="cta-button px-5 py-2 rounded-full text-white text-sm font-medium"
-            >
-              무료 상담
-            </button>
-            <a
-              href="https://naver.me/xnOaXeSF"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-5 py-2 rounded-full border-2 border-[#FF6B35] text-[#FF6B35] text-sm font-medium hover:bg-[#FF6B35] hover:text-white transition-colors"
-            >
-              메뉴 보러가기
-            </a>
-            <a
-              href="https://naver.me/5kPsUmab"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-5 py-2 rounded-full border-2 border-[#FF6B35] text-[#FF6B35] text-sm font-medium hover:bg-[#FF6B35] hover:text-white transition-colors"
-            >
-              브랜드 보러가기
-            </a>
+            <div className="flex items-center space-x-2">
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="cta-button px-5 py-2 rounded-full text-white text-sm font-medium"
+              >
+                무료 상담
+              </button>
+              <a
+                href="https://naver.me/xnOaXeSF"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-2 rounded-full border-2 border-[#FF6B35] text-[#FF6B35] text-sm font-medium hover:bg-[#FF6B35] hover:text-white transition-colors"
+              >
+                메뉴 보러가기
+              </a>
+              <a
+                href="https://naver.me/5kPsUmab"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-2 rounded-full border-2 border-[#FF6B35] text-[#FF6B35] text-sm font-medium hover:bg-[#FF6B35] hover:text-white transition-colors"
+              >
+                브랜드 보러가기
+              </a>
+            </div>
           </div>
 
           {/* Mobile Hamburger Button */}
