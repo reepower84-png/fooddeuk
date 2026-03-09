@@ -92,12 +92,20 @@ export default function Navigation() {
               무료 상담
             </button>
             <a
-              href="https://drive.google.com/file/d/10Obfer2g3MYluf7c_t_9tEc_bkZT_FVt/view?usp=sharing"
+              href="https://naver.me/xnOaXeSF"
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-2 rounded-full border-2 border-[#FF6B35] text-[#FF6B35] text-sm font-medium hover:bg-[#FF6B35] hover:text-white transition-colors"
             >
               메뉴 보러가기
+            </a>
+            <a
+              href="https://naver.me/5kPsUmab"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-2 rounded-full border-2 border-[#FF6B35] text-[#FF6B35] text-sm font-medium hover:bg-[#FF6B35] hover:text-white transition-colors"
+            >
+              브랜드 보러가기
             </a>
           </div>
 
@@ -119,7 +127,7 @@ export default function Navigation() {
       {/* Mobile Menu */}
       <div
         className={`md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg transition-all duration-300 overflow-hidden ${
-          isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          isMenuOpen ? 'max-h-[32rem] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
         <div className="px-4 py-4 space-y-2">
@@ -142,14 +150,24 @@ export default function Navigation() {
           >
             무료 상담 신청
           </button>
-          <a
-            href="https://drive.google.com/file/d/10Obfer2g3MYluf7c_t_9tEc_bkZT_FVt/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full text-center px-5 py-3 rounded-full border-2 border-[#FF6B35] text-[#FF6B35] text-sm font-medium mt-2 hover:bg-[#FF6B35] hover:text-white transition-colors"
-          >
-            메뉴 보러가기
-          </a>
+          <div className="flex gap-2 mt-2">
+            <a
+              href="https://naver.me/xnOaXeSF"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 text-center px-3 py-3 rounded-full border-2 border-[#FF6B35] text-[#FF6B35] text-sm font-medium hover:bg-[#FF6B35] hover:text-white transition-colors"
+            >
+              메뉴 보러가기
+            </a>
+            <a
+              href="https://naver.me/5kPsUmab"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 text-center px-3 py-3 rounded-full border-2 border-[#FF6B35] text-[#FF6B35] text-sm font-medium hover:bg-[#FF6B35] hover:text-white transition-colors"
+            >
+              브랜드 보러가기
+            </a>
+          </div>
         </div>
       </div>
     </nav>
