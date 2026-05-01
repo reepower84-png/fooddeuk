@@ -212,6 +212,24 @@ export default function ContactSection() {
                 )}
               </button>
 
+              {/* KakaoTalk Button */}
+              <a
+                href="http://pf.kakao.com/_SxcxbBC/chat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-[#FEE500] hover:bg-[#FDD835] text-[#181600] text-lg font-semibold transition-colors"
+              >
+                <svg
+                  className="w-6 h-6"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path d="M12 3C6.48 3 2 6.58 2 11c0 2.84 1.86 5.33 4.66 6.76l-1.18 4.32c-.1.36.31.65.62.45L11.4 19.4c.2.02.4.03.6.03 5.52 0 10-3.58 10-8s-4.48-8-10-8z" />
+                </svg>
+                카카오톡으로 상담하기
+              </a>
+
               {/* Result Message */}
               {submitResult && (
                 <div
