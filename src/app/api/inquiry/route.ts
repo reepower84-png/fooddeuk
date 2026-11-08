@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { supabase } from '@/lib/supabase';
 import { sendDiscordNotification } from '@/lib/discord';
 
 export async function POST(request: NextRequest) {
@@ -25,35 +24,19 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Save inquiry to Supabase
-    const { data: inquiry, error } = await supabase
-      .from('inquiries')
-      .insert([
-        {
-          name,
-          phone,
-          message: message || '',
-          status: 'pending',
-        },
-      ])
-      .select()
-      .single();
+    // Send Discord notification directly
+    const sent = await sendDiscordNotification(name, phone, message || '');
 
-    if (error) {
-      console.error('Supabase error:', error);
+    if (!sent) {
       return NextResponse.json(
-        { error: '데이터 저장 중 오류가 발생했습니다.' },
+        { error: '알림 전송 중 오류가 발생했습니다.' },
         { status: 500 }
       );
     }
 
-    // Send Discord notification
-    await sendDiscordNotification(name, phone, message || '');
-
     return NextResponse.json({
       success: true,
       message: '상담 신청이 완료되었습니다.',
-      inquiry,
     });
   } catch (error) {
     console.error('Inquiry submission error:', error);
