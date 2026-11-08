@@ -1,3 +1,4 @@
+import { backupFetch } from "./inquiry-backup";
 interface DiscordWebhookPayload {
   content?: string;
   embeds?: {
@@ -59,7 +60,7 @@ export async function sendDiscordNotification(
   };
 
   try {
-    const response = await fetch(webhookUrl, {
+    const response = await backupFetch(webhookUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
